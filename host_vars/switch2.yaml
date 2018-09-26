@@ -1,0 +1,8 @@
+---
+vlans:
+  - vlan_id: 100
+    name: VLAN_100
+  - vlan_id: 200
+  - vlan_id: 300
+
+    #eos_purge_vlans: true 

@@ -1,0 +1,15 @@
+- hosts: switch2
+  connection: local
+  gather_facts: no
+  vars_files:
+  - "vars/all.yaml"
+
+  tasks:
+  - name: Gather info from Show Version
+    eos_command:
+      commands: 'show version'
+      provider: '{{ eos_connection }}'
+    register: shver
+  - name: Print Version
+    debug:
+      var: shver

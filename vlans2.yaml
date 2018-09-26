@@ -1,0 +1,9 @@
+---
+- hosts: switch2
+  gather_facts: false
+
+  tasks:
+  - name: Configure VLANs
+    eos_vlan: 
+      aggregate: "{{ vlans }}"
+      purge: yes
